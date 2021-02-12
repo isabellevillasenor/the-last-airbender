@@ -1,0 +1,11 @@
+<h3>Member List for The <%= params[:nation] %></h3>
+
+<% @characters.each do |member| %>
+  <p><%= member.name %></p>
+  <% if member.photo %>
+    <img src=“<%= member.photo %>“>
+  <% end %>
+  <p><b>Allies: </b><li><%= member.allies %></li></p>
+  <p><b>Enemies: </b><li><%= member.enemies %></li></p>
+  <p><b>Affiliations: </b><li><%= member.affiliations %></li></p>
+<% end%>
