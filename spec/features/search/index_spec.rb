@@ -5,9 +5,9 @@ describe 'Search Index Page' do
     visit root_path
 
     select 'Fire Nation', from: :nation
-    click_on 'Search for Members'
+    click_on 'Search For Members'
 
     expect(current_path).to eq(search_path)
-    expect(characters.count).to eq()
+    expect(members.count).to eq(20)
   end
 end
